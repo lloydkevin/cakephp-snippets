@@ -23,7 +23,6 @@ class ImageHelper extends Helper {
  * @param boolean 	$return Wheter this method should return a value or output it. This overrides AUTO_OUTPUT.
  * @return mixed	Either string or echos the value, depends on AUTO_OUTPUT and $return.
  * @access public
-
  * usage: <?php $image->resize('blog_photos/blog_photo_1.jpg', 25, 25, true); ?>
  */
 	function resize($path='', $width, $height, $aspect = true, $htmlAttributes = array(), $return = false) 
