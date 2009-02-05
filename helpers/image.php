@@ -1,6 +1,6 @@
 <?php 
-http://cakeforge.org/snippet/detail.php?type=snippet&id=188
 /*
+http://cakeforge.org/snippet/detail.php?type=snippet&id=188
 Version: 1.6
 */
 
@@ -54,9 +54,11 @@ class ImageHelper extends Helper {
 		if (!($size = getimagesize($url))) 
 			return; // image doesn't exist
 		
+		$height = isset($height) ? $height : $size[1];
+		$width = isset($width) ? $width : $size[0];
 		// adjust to aspect.
 		if ($aspect) 
-		{ 
+		{
 			if (($size[1]/$height) > ($size[0]/$width))  // $size[0]:width, [1]:height, [2]:type
 				$width = ceil(($size[0]/$size[1]) * $height);
 			else 
